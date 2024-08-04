@@ -800,6 +800,7 @@ a {
     & .hand-left {
       opacity: 0.1;
       top: 40px;
+      width: 200px;
     }
 
     & .story-main {
