@@ -251,6 +251,59 @@ a {
   }
 }
 
+/* how it works syle*/
+.how-it-works {
+  width: 100%;
+  padding: 50px 128px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  & .work {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+
+    & img {
+      width: 585px;
+      height: 500px;
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    & .work-text {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      justify-content: center;
+
+      & .work-text-title {
+        font-size: 5.2rem;
+        font-weight: 600;
+        line-height: 6rem;
+      }
+
+      & .work-text-description {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
+
+      & .work-text-additional {
+        font-size: 1.6rem;
+        font-weight: 500;
+
+        & i {
+          color: #16a34a;
+        }
+      }
+    }
+  }
+
+  & .work:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+}
+
 /* footer style */
 .footer {
   background-color: #16171c;
@@ -336,6 +389,7 @@ a {
     font-size: 1.4rem;
   }
 }
+
 /* responsive layout */
 @media screen and (max-width: 1200px) {
   .navbar {
@@ -420,6 +474,10 @@ a {
 
   .footer {
     padding: 70px 50px;
+  }
+
+  .how-it-works {
+    padding: 50px 50px;
   }
 }
 
@@ -506,6 +564,32 @@ a {
         "group3 group4 group5";
     }
   }
+
+  .how-it-works {
+    & .work {
+      & img {
+        width: 385px;
+        height: 300px;
+      }
+
+      & .work-text {
+        gap: 10px;
+        & .work-text-title {
+          font-size: 3rem;
+          line-height: 4rem;
+        }
+
+        & .work-text-description {
+          font-size: 1.2rem;
+        }
+
+        & .work-text-additional {
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
 }
 
 /* mobile screen */
@@ -560,6 +644,38 @@ a {
 
     & .footer-copyright {
       line-height: 3rem;
+    }
+  }
+
+  .how-it-works {
+    & .work {
+      flex-direction: column-reverse;
+      gap: 40px;
+      & img {
+        width: 285px;
+        height: 200px;
+      }
+
+      & .work-text {
+        gap: 20px;
+        & .work-text-title {
+          font-size: 3rem;
+          line-height: 4rem;
+        }
+
+        & .work-text-description {
+          font-size: 1.2rem;
+        }
+
+        & .work-text-additional {
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+      }
+    }
+
+    & .work:nth-child(2) {
+      flex-direction: column-reverse;
     }
   }
 }
